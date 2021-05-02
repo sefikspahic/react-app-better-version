@@ -8,7 +8,8 @@ const [student, setStudent] = useState({
     _id: '0',
     firstName: '',
     lastName: '',
-    yearOfBirth: 0
+    yearOfBirth: 0,
+    address: ''
 
 });
 
@@ -74,6 +75,11 @@ history.push('/students')
         <div style={{margin: '12px 0'}}>
             <label htmlFor='yearOfBirth'>Year Of Birth:</label>
             <input type='text' name='yearOfBirth' value={student.yearOfBirth} onChange={changeHandler} />
+        </div>
+        <div style={{margin: '12px 0'}}>
+            <label htmlFor='address'>Address:</label>
+            <input type='text' name='address' value={student.address} onChange={changeHandler} />
+            <div className='clormesage'> {requiredMessage}</div>
         </div>
         <hr />
         {id !== '0' && (

@@ -25,13 +25,14 @@ const Students = ({match, history }) => {
     return (
         <div className='container'>
         <h1>Students</h1>
-        <button className='full-button' onClick={() => nextPath('/courses/0')}>Add new</button>
+        <button className='full-button' onClick={() => nextPath('/students/0')}>Add new</button>
         <table>
             <thead>
                 <tr>
                     <th>First Name</th>
                     <th>last Name</th>
                     <th>Year Of Birth</th>
+                    <th>Address</th>
                     <th>Edit</th>
                     <th>Delete</th>
                    
@@ -43,6 +44,7 @@ const Students = ({match, history }) => {
                     <td>{c.firstName}</td>
                     <td>{c.lastName}</td>
                     <td>{c.yearOfBirth}</td>
+                    <td>{c.address}</td>
                     <td><button className='button'><Link to={`/students/${c._id}`}>Edit</Link></button></td>
                     <td><input type="button" value="Delete" onClick={()=>delStudents(c._id)}/></td>
                    
